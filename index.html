@@ -1,3 +1,4 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -7,151 +8,303 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='4' y='4' width='56' height='56' rx='14' fill='%23FF7A29'/%3E%3Cpath d='M14 32h24v12H14z' fill='%23FFFFFF'/%3E%3Cpath d='M38 30l8 8-8 8' fill='none' stroke='%23FFFFFF' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://miaoda.feishu.cn">
 <link href="https://miaoda.feishu.cn/fonts/css2?family=ZCOOL+KuaiLe&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="校园跑腿平台.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <header class="topbar">
   <div class="brand">
-    <svg width="26" height="26" viewBox="0 0 64 64" aria-hidden="true"><rect x="4" y="4" width="56" height="56" rx="14" fill="#FF7A29"/><path d="M14 32h24v12H14z" fill="#FFFFFF"/><path d="M38 30l8 8-8 8" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <svg width="26" height="26" viewBox="0 0 64 64" aria-hidden="true"><rect x="4" y="4" width="56" height="56" rx="14" fill="#FF7A29" /><path d="M14 32h24v12H14z" fill="#FFFFFF" /><path d="M38 30l8 8-8 8" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" /></svg>
     <span>校园跑腿</span>
   </div>
   <nav class="nav" id="nav">
     <a href="#/" data-nav="home">首页</a>
-    <a href="#/register/rider" data-nav="rider">骑手注册</a>
-    <a href="#/register/user" data-nav="user">用户注册</a>
-    <a href="#/register/merchant" data-nav="merchant">商家注册</a>
+    <a href="#/task" data-nav="task">跑腿大厅</a>
+    <a href="#/secondhand" data-nav="secondhand">二手集市</a>
+    <a href="#/food" data-nav="food">校园外卖</a>
+    <a href="#/auth/login" class="enter" data-nav="auth" id="authNavLink">注册登录</a>
   </nav>
 </header>
-
 <main class="stage">
-
-  <!-- ===== 视图：首页 ===== -->
+  <!-- ===== 视图：首页（跑腿业务展示） ===== -->
   <section class="view" id="view-home">
     <div class="hero">
       <div class="hero-copy">
         <span class="kicker">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 4.8 5.3.8-3.8 3.7.9 5.2-4.8-2.5-4.8 2.5.9-5.2L4.3 7.6l5.3-.8z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 4.8 5.3.8-3.8 3.7.9 5.2-4.8-2.5-4.8 2.5.9-5.2L4.3 7.6l5.3-.8z" /></svg>
           大学生校园跑腿平台
         </span>
-        <h1>校园最后一公里，<span class="hl">交给跑腿侠</span></h1>
-        <p>骑手灵活接单赚零花，用户随时召唤省时间，商家快速配送提流量。一个平台，三个身份，注册即用。</p>
-      </div>
-      <div class="hero-art">
-        <svg viewBox="0 0 300 220" aria-hidden="true" fill="none">
-          <path d="M18 40c70 24 130 24 200 0" stroke="#FFB37E" stroke-width="3" stroke-dasharray="7 8" stroke-linecap="round"/>
-          <path d="M18 110c70 24 130 24 200 0" stroke="#7FD6CE" stroke-width="3" stroke-dasharray="7 8" stroke-linecap="round"/>
-          <path d="M18 180c70 24 130 24 200 0" stroke="#A6AEF7" stroke-width="3" stroke-dasharray="7 8" stroke-linecap="round"/>
-          <circle cx="20" cy="36" r="9" fill="#12B3A6"/><circle cx="20" cy="106" r="9" fill="#FF7A29"/><circle cx="20" cy="176" r="9" fill="#5B6CF0"/>
-          <g transform="translate(255 30)">
-            <rect x="-13" y="-9" width="26" height="18" rx="4" fill="#fff" stroke="#E85D14" stroke-width="2.5"/>
-            <path d="M-13 0h26M0 -9v18" stroke="#E85D14" stroke-width="2"/>
-          </g>
-          <g transform="translate(255 100)">
-            <rect x="-13" y="-9" width="26" height="18" rx="4" fill="#fff" stroke="#0D8F84" stroke-width="2.5"/>
-            <path d="M-13 0h26M0 -9v18" stroke="#0D8F84" stroke-width="2"/>
-          </g>
-          <g transform="translate(255 170)">
-            <rect x="-13" y="-9" width="26" height="18" rx="4" fill="#fff" stroke="#4653C9" stroke-width="2.5"/>
-            <path d="M-13 0h26M0 -9v18" stroke="#4653C9" stroke-width="2"/>
-          </g>
-        </svg>
+        <h1>校园生活服务，<span class="hl">一平台搞定</span></h1>
+        <p>发布跑腿任务、买卖二手好物、外卖配送到寝，学生与商家都在这里。</p>
       </div>
     </div>
-
-    <h2 class="section-title">选择你的身份</h2>
-    <p class="section-sub">点击「申请注册」，进入对应模块的注册链接完成注册。</p>
-
+    <h2 class="section-title">跑腿业务一览</h2>
+    <p class="section-sub">任务发布、二手买卖、外卖配送，覆盖校园生活方方面面。</p>
     <div class="modules">
-      <!-- 骑手模块 -->
+      <!-- 跑腿任务发布 -->
       <div class="module" style="--ac:#12B3A6;--ac-deep:#0D8F84;--ac-soft:rgba(18,179,166,.10)">
         <div class="module-icon">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="17" r="2.4"/><circle cx="17" cy="17" r="2.4"/><path d="M6 17h3.5l4.5-7h4l2 3.4a2.4 2.4 0 0 1-1.6 3.6H17"/><path d="M14.8 10l1.4 4.2M4.5 6.5h5l2 3"/><path d="M2 13.5h6"/></svg>
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2.5" /><path d="M8 8h8M8 12h8M8 16h5" /></svg>
         </div>
-        <h3>骑手注册</h3>
-        <p class="tagline">空闲时间接单配送，灵活自由，跑一单赚一单。</p>
+        <h3>跑腿任务发布</h3>
+        <p class="tagline">代取快递、代买代送、专人急送，一键发布，接单即达。</p>
         <ul>
-          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12 9 17 20 6"/></svg>灵活接单，时间自主</li>
-          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12 9 17 20 6"/></svg>按单结算，收益清晰</li>
-          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12 9 17 20 6"/></svg>校内配送，安全有保障</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12 9 17 20 6" /></svg>一键发布任务</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12 9 17 20 6" /></svg>任务进度实时可见</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12 9 17 20 6" /></svg>专人接单，配送有保障</li>
         </ul>
-        <button class="btn-apply" data-role="rider">申请注册
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        <button class="btn-apply" data-go="task">进入跑腿大厅
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
         </button>
-        <div class="link-hint" id="hint-rider">注册链接待配置</div>
       </div>
-
-      <!-- 用户模块 -->
+      <!-- 二手商品买卖 -->
       <div class="module" style="--ac:#FF7A29;--ac-deep:#E85D14;--ac-soft:rgba(255,122,41,.10)">
         <div class="module-icon">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M3 9h18"/><path d="M8 14h8M8 17h5"/></svg>
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h13M13 5l4 4-4 4" /><path d="M20 15H7M11 11l-4 4 4 4" /></svg>
         </div>
-        <h3>用户注册</h3>
-        <p class="tagline">下单寄取、代买代送，随时召唤身边的骑手。</p>
+        <h3>二手商品买卖</h3>
+        <p class="tagline">教材、数码、生活好物，校内闲置买卖，低价淘到宝。</p>
         <ul>
-          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12 9 17 20 6"/></svg>一键下单，极速响应</li>
-          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12 9 17 20 6"/></svg>全程定位，实时追踪</li>
-          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12 9 17 20 6"/></svg>校园专属优惠券</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12 9 17 20 6" /></svg>闲置发布与求购</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12 9 17 20 6" /></svg>同校当面交易</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12 9 17 20 6" /></svg>验货无忧，低价保真</li>
         </ul>
-        <button class="btn-apply" data-role="user">申请注册
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        <button class="btn-apply" data-go="secondhand">进入二手集市
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
         </button>
-        <div class="link-hint" id="hint-user">注册链接待配置</div>
       </div>
-
-      <!-- 商家模块 -->
+      <!-- 外卖平台配送 -->
       <div class="module" style="--ac:#5B6CF0;--ac-deep:#4653C9;--ac-soft:rgba(91,108,240,.10)">
         <div class="module-icon">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h16l-1.5 11a2 2 0 0 1-2 1.8h-9A2 2 0 0 1 5.5 19z"/><path d="M4 8l2.3-4h11.4L20 8"/><path d="M9 11v3M15 11v3"/></svg>
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1 12a2 2 0 0 1-2 1.8H8a2 2 0 0 1-2-1.8z" /><path d="M8 8V7a4 4 0 0 1 8 0v1" /><path d="M9 11v3M15 11v3" /></svg>
         </div>
-        <h3>商家平台</h3>
-        <p class="tagline">入驻校园配送网络，订单直达，店铺流量增长。</p>
+        <h3>外卖平台配送</h3>
+        <p class="tagline">校园商户入驻，外卖配送到寝，美味不用等。</p>
         <ul>
-          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12 9 17 20 6"/></svg>骑手集中，配送高效</li>
-          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12 9 17 20 6"/></svg>学生客群，精准触达</li>
-          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12 9 17 20 6"/></svg>对账清晰，结算及时</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12 9 17 20 6" /></svg>商户一键入驻</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12 9 17 20 6" /></svg>订单直达商户后台</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12 9 17 20 6" /></svg>配送到寝，准时达</li>
         </ul>
-        <button class="btn-apply" data-role="merchant">申请注册
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        <button class="btn-apply" data-go="food">校园外卖
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
         </button>
-        <div class="link-hint" id="hint-merchant">注册链接待配置</div>
       </div>
     </div>
   </section>
 
-  <!-- ===== 视图：注册 ===== -->
-  <section class="view" id="view-register">
-    <div class="register-wrap" id="registerBox"></div>
+  <!-- ===== 视图：跑腿任务大厅 ===== -->
+  <section class="view" id="view-task">
+    <div class="page-header task-page-header">
+      <div class="page-title-wrap">
+        <h2>🏃‍♂️跑腿任务大厅</h2>
+        <p>快递代取｜资料代送｜代买代办｜数码取送｜代发快递，校园内快速接单</p>
+      </div>
+      <button class="page-action-btn" id="openTaskPublishBtn">+ 发布跑腿任务</button>
+    </div>
+    <div class="task-filter-bar">
+      <button class="task-filter active" data-type="all">全部任务</button>
+      <button class="task-filter" data-type="express">快递代取</button>
+      <button class="task-filter" data-type="doc">资料代送</button>
+      <button class="task-filter" data-type="buy">代买代办</button>
+      <button class="task-filter" data-type="digital">数码取送</button>
+      <button class="task-filter" data-type="send">代发快递</button>
+    </div>
+    <div id="taskList" class="task-list"></div>
   </section>
 
+  <!-- ===== 视图：二手集市 ===== -->
+  <section class="view" id="view-secondhand">
+    <div class="page-header task-page-header">
+      <div class="page-title-wrap">
+        <h2>🛒校园二手集市</h2>
+        <p>教材｜数码｜服饰｜生活用品｜运动器材，校内闲置交易</p>
+      </div>
+      <button class="page-action-btn" id="openSellGoodsBtn">+ 上架商品</button>
+    </div>
+    <div class="second-filter-bar">
+      <div class="filter-group">
+        <label>价格：</label>
+        <input type="number" id="priceMin" placeholder="最低">
+        <span>-</span>
+        <input type="number" id="priceMax" placeholder="最高">
+      </div>
+      <div class="filter-group">
+        <label>成色：</label>
+        <select id="qualitySel">
+          <option value="all">全部成色</option>
+          <option value="全新">全新</option>
+          <option value="9成新">9成新</option>
+          <option value="8成新">8成新</option>
+          <option value="7成新">7成新</option>
+          <option value="6成新及以下">6成新及以下</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label>分类：</label>
+        <select id="catSel">
+          <option value="all">全部分类</option>
+          <option value="教材书籍">教材书籍</option>
+          <option value="数码电子">数码电子</option>
+          <option value="服饰鞋帽">服饰鞋帽</option>
+          <option value="生活用品">生活用品</option>
+          <option value="运动器材">运动器材</option>
+        </select>
+      </div>
+      <button id="filterSecondBtn" class="filter-btn">筛选</button>
+    </div>
+    <div class="cart-tip">
+      🛒购物车：共<span id="cartCount">0</span>件
+    </div>
+    <div id="secondList" class="second-list"></div>
+  </section>
+
+  <!-- ===== 视图：校园外卖 ===== -->
+  <section class="view" id="view-food">
+    <div class="page-header">
+      <h2>🍔校园外卖大厅</h2>
+      <p>校园周边商家，配送到寝室楼下</p>
+    </div>
+    <div class="food-tab-wrap">
+      <div class="food-tab-item active" data-foodtab="shop">🍔校园外卖大厅</div>
+      <div class="food-tab-item" data-foodtab="delivery">🏃跑腿配送小助手</div>
+    </div>
+    <div id="foodShopPanel" class="food-panel">
+      <div id="foodList" class="food-list"></div>
+    </div>
+    <!-- 跑腿配送小助手面板 -->
+    <div id="foodDeliveryPanel" class="food-panel hidden">
+      <div class="delivery-desc">📦 以下为待配送的外卖订单，点击【我要配送】即可接单赚取配送费</div>
+      <div id="deliveryOrderList" class="delivery-order-list"></div>
+    </div>
+  </section>
+
+  <!-- ===== 视图：个人中心 ===== -->
+  <section class="view" id="view-profile">
+    <div id="profileContent"></div>
+  </section>
+
+  <!-- ===== 视图：注册登录 ===== -->
+  <section class="view" id="view-auth">
+    <div class="auth-card" id="authBox"></div>
+  </section>
 </main>
+
+<!-- 弹窗：发布跑腿任务 -->
+<dialog id="dialogPublishTask" class="common-dialog">
+  <div class="dlg-head">
+    <h3>发布跑腿任务</h3>
+    <button type="button" class="dlg-close-btn" id="closeTaskDlg">✕</button>
+  </div>
+  <div class="dlg-body">
+    <form id="publishTaskForm">
+      <div class="form-item">
+        <label>任务类型</label>
+        <select name="taskType">
+          <option value="express">快递代取</option>
+          <option value="doc">资料代送</option>
+          <option value="buy">代买代办</option>
+          <option value="digital">数码取送</option>
+          <option value="send">代发快递</option>
+        </select>
+      </div>
+      <div class="form-item">
+        <label>任务标题</label>
+        <input type="text" name="title" placeholder="简单描述任务，例：北门快递代取">
+      </div>
+      <div class="form-item">
+        <label>任务描述</label>
+        <textarea name="desc" rows="3" placeholder="详细说明物品、注意事项"></textarea>
+      </div>
+      <div class="form-item">
+        <label>取件起点</label>
+        <input type="text" name="fromAddr" placeholder="例如：北门快递站 / 二食堂">
+      </div>
+      <div class="form-item">
+        <label>送达终点</label>
+        <input type="text" name="toAddr" placeholder="例如：3号宿舍楼302">
+      </div>
+      <div class="form-item">
+        <label>期望赏金（元）</label>
+        <input type="number" min="1" step="1" name="reward" placeholder="输入赏金，最少1元">
+      </div>
+      <div class="form-item">
+        <label>期望配送时段</label>
+        <input type="text" name="timeSlot" placeholder="例如：今天 14:00-16:00">
+      </div>
+      <div class="form-item">
+        <label>联系人昵称</label>
+        <input type="text" name="publisher" placeholder="你的昵称">
+      </div>
+      <button type="submit" class="btn-submit dlg-submit">确认发布任务</button>
+    </form>
+  </div>
+</dialog>
+
+<!-- 弹窗：上架二手商品 -->
+<dialog id="dialogSellGoods" class="common-dialog">
+  <div class="dlg-head">
+    <h3>上架二手商品</h3>
+    <button type="button" class="dlg-close-btn" id="closeSellDlg">✕</button>
+  </div>
+  <div class="dlg-body">
+    <form id="sellGoodsForm">
+      <div class="form-item">
+        <label>商品名称</label>
+        <input type="text" name="gname" placeholder="例：高等数学教材">
+      </div>
+      <div class="form-item">
+        <label>商品分类</label>
+        <select name="gcat">
+          <option value="教材书籍">教材书籍</option>
+          <option value="数码电子">数码电子</option>
+          <option value="服饰鞋帽">服饰鞋帽</option>
+          <option value="生活用品">生活用品</option>
+          <option value="运动器材">运动器材</option>
+        </select>
+      </div>
+      <div class="form-item">
+        <label>商品成色</label>
+        <select name="gquality">
+          <option value="全新">全新</option>
+          <option value="9成新">9成新</option>
+          <option value="8成新">8成新</option>
+          <option value="7成新">7成新</option>
+          <option value="6成新及以下">6成新及以下</option>
+        </select>
+      </div>
+      <div class="form-item">
+        <label>售价（元）</label>
+        <input type="number" min="1" step="0.5" name="gprice" placeholder="商品售价">
+      </div>
+      <div class="form-item">
+        <label>商品描述</label>
+        <textarea name="gdesc" rows="3" placeholder="描述商品情况，有无破损等"></textarea>
+      </div>
+      <button type="submit" class="btn-submit dlg-submit">确认上架商品</button>
+    </form>
+  </div>
+</dialog>
 
 <div class="store-bar">
   <span class="store-info">本地数据 · 已保存 <b id="storeCount">0</b> 条注册记录</span>
   <button type="button" class="store-btn" id="btnViewStore">查看记录</button>
   <button type="button" class="store-btn store-btn-plain" id="btnClearStore">清空记录</button>
 </div>
-
 <footer class="foot">
   校园跑腿 · 大学生校园跑腿平台 · 面向在校师生与校园商户<br>
   仅限成年在校用户注册使用 · 配送请遵守校园管理规定
 </footer>
-
 <div class="toast" id="toast" role="status"></div>
-
 <dialog id="storeDialog" class="store-dlg">
   <div class="store-head">
     <h3>本地注册记录</h3>
     <button type="button" class="dlg-close" id="btnCloseStore" aria-label="关闭">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18" /></svg>
     </button>
   </div>
   <div class="store-list" id="storeList"></div>
   <p class="store-empty hidden" id="storeEmpty">还没有注册记录，去提交一单试试吧。</p>
   <p class="store-note">数据保存在当前浏览器的 localStorage 中，仅本机可见，最多保留 50 条。</p>
 </dialog>
-
-<script src="校园跑腿平台.js"></script>
-
+<script src="script.js"></script>
 </body>
 </html>
